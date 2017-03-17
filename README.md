@@ -9,3 +9,6 @@ https://www.raywenderlich.com/112027/reference-value-types-in-swift-part-1
 
 ## Day 2: Reference vs Value Types in Swift: Part 2/2
 https://www.raywenderlich.com/112029/reference-value-types-in-swift-part-2
+
+## Day 3: Initialization In Depth, Part 1/2
+https://www.raywenderlich.com/119922/swift-tutorial-initialization-part-1
