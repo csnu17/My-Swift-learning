@@ -6,3 +6,6 @@ https://www.raywenderlich.com/119881/enums-structs-and-classes-in-swift
 
 ## Day 1: Reference vs Value Types in Swift: Part 1/2
 https://www.raywenderlich.com/112027/reference-value-types-in-swift-part-1
+
+## Day 2: Reference vs Value Types in Swift: Part 2/2
+https://www.raywenderlich.com/112029/reference-value-types-in-swift-part-2
