@@ -15,3 +15,6 @@ https://www.raywenderlich.com/119922/swift-tutorial-initialization-part-1
 
 ## Day 4: Initialization In Depth, Part 2/2
 https://www.raywenderlich.com/121603/swift-tutorial-initialization-part-2
+
+## Day 5: Magical Error Handling in Swift
+https://www.raywenderlich.com/130197/magical-error-handling-swift
