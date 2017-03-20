@@ -18,3 +18,6 @@ https://www.raywenderlich.com/121603/swift-tutorial-initialization-part-2
 
 ## Day 5: Magical Error Handling in Swift
 https://www.raywenderlich.com/130197/magical-error-handling-swift
+
+## Day 6: Collection Data Structures in Swift
+https://www.raywenderlich.com/123100/collection-data-structures-swift-2
