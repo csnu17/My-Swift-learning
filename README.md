@@ -21,3 +21,6 @@ https://www.raywenderlich.com/130197/magical-error-handling-swift
 
 ## Day 6: Collection Data Structures in Swift
 https://www.raywenderlich.com/123100/collection-data-structures-swift-2
+
+## Day 7: Implementing Custom Subscripts in Swift
+https://www.raywenderlich.com/123102/implementing-custom-subscripts-swift
