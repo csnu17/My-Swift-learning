@@ -24,3 +24,6 @@ https://www.raywenderlich.com/123100/collection-data-structures-swift-2
 
 ## Day 7: Implementing Custom Subscripts in Swift
 https://www.raywenderlich.com/123102/implementing-custom-subscripts-swift
+
+## Day 8: Pattern Matching in Swift
+https://www.raywenderlich.com/134844/pattern-matching-in-swift
