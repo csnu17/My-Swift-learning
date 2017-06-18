@@ -27,3 +27,6 @@ https://www.raywenderlich.com/123102/implementing-custom-subscripts-swift
 
 ## Day 8: Pattern Matching in Swift
 https://www.raywenderlich.com/134844/pattern-matching-in-swift
+
+## Day 9: Getting Started with Core Data Tutorial (plus MVVM).
+https://www.raywenderlich.com/145809/getting-started-core-data-tutorial
