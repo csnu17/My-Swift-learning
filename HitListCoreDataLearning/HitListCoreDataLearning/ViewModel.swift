@@ -20,15 +20,21 @@ class ViewModel {
         return "\(person.firstName) \(person.lastName)"
     }
     
+    var personIdentifier: String {
+        return person.identifier
+    }
+    
 }
 
 extension ViewModel {
     
     static func addPerson(firstName: String, lastName: String) -> ViewModel {
-        let person = Person(firstName: firstName, lastName: lastName)
+        let identifier = UUID().uuidString
+        let person = Person(identifier: identifier, firstName: firstName, lastName: lastName)
         let personViewModel = ViewModel(person: person)
         
         if let personManagedObject = CoreDataService.shared.prepareManagedObject(entityName: "PersonManagedObject") {
+            personManagedObject.setValue(identifier, forKey: "identifier")
             personManagedObject.setValue(firstName, forKey: "firstName")
             personManagedObject.setValue(lastName, forKey: "lastName")
             CoreDataService.shared.saveContext()
@@ -41,13 +47,19 @@ extension ViewModel {
         var viewModels = [ViewModel]()
         if let personManagedObjects = CoreDataService.shared.fetchObjects(entityName: entityName) {
             viewModels = personManagedObjects.map {
+                let identifier = $0.value(forKeyPath: "identifier") as? String ?? ""
                 let firstName = $0.value(forKeyPath: "firstName") as? String ?? ""
                 let lastName = $0.value(forKeyPath: "lastName") as? String ?? ""
-                let person = Person(firstName: firstName, lastName: lastName)
+                let person = Person(identifier: identifier, firstName: firstName, lastName: lastName)
                 return ViewModel(person: person)
             }
         }
         return viewModels
+    }
+    
+    static func deletePerson(identifier: String, completion: (() -> ())) {
+        CoreDataService.shared.deleteObject(entityName: "PersonManagedObject", identifier: identifier)
+        completion()
     }
     
 }

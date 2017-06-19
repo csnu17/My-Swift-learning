@@ -10,6 +10,7 @@ import Foundation
 
 struct Person {
     
+    let identifier: String
     let firstName: String
     let lastName: String
     
