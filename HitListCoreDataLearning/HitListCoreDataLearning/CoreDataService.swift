@@ -80,5 +80,21 @@ extension CoreDataService {
         }
     }
     
+    func updateObject(entityName: String, identifier: String, valuesForUpdate: [String: Any]) {
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: entityName)
+        fetchRequest.predicate = NSPredicate(format: "identifier == %@", identifier)
+        
+        do {
+            if let object = try managedContext.fetch(fetchRequest).first {
+                valuesForUpdate.forEach {
+                    object.setValue($1, forKey: $0)
+                }
+                saveContext()
+            }
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+    }
+    
 }
 
