@@ -11,8 +11,11 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    
+    // View model datasource that wraps persons raw data for separating business logic from view controller.
     fileprivate var viewModels: [ViewModel] = []
     
+    // ViewController view model manager
     fileprivate var viewModelManager = ViewModel()
     
     override func viewDidLoad() {

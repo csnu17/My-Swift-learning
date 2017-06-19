@@ -12,6 +12,8 @@ import CoreData
 class CoreDataService {
     
     static let shared = CoreDataService()
+    
+    // Prevent a developer creates instance of this class.
     private init() {}
     
     // MARK: - Core Data stack
@@ -46,6 +48,8 @@ class CoreDataService {
     }
     
 }
+
+// MARK: - select, insert, update, delete functions for Core Data
 
 extension CoreDataService {
     

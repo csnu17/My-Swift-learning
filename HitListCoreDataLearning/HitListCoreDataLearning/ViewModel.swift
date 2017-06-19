@@ -35,6 +35,8 @@ class ViewModel {
     
 }
 
+// MARK: - ViewController view model manager functions
+
 extension ViewModel {
     
     func addPerson(firstName: String, lastName: String) -> ViewModel {
