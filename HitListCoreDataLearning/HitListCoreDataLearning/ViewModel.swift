@@ -10,25 +10,34 @@ import Foundation
 
 class ViewModel {
     
-    private let person: Person
+    fileprivate var person: Person?
     
-    init(person: Person) {
+    convenience init(person: Person) {
+        self.init()
         self.person = person
     }
     
-    var fullName: String {
-        return "\(person.firstName) \(person.lastName)"
+    var personIdentifier: String {
+        return person?.identifier ?? ""
     }
     
-    var personIdentifier: String {
-        return person.identifier
+    var firstName: String {
+        return person?.firstName ?? ""
+    }
+    
+    var lastName: String {
+        return person?.lastName ?? ""
+    }
+    
+    var fullName: String {
+        return "\(person?.firstName ?? "") \(person?.lastName ?? "")"
     }
     
 }
 
 extension ViewModel {
     
-    static func addPerson(firstName: String, lastName: String) -> ViewModel {
+    func addPerson(firstName: String, lastName: String) -> ViewModel {
         let identifier = UUID().uuidString
         let person = Person(identifier: identifier, firstName: firstName, lastName: lastName)
         let personViewModel = ViewModel(person: person)
@@ -43,7 +52,7 @@ extension ViewModel {
         return personViewModel
     }
     
-    static func fetchPerson(entityName: String) -> [ViewModel] {
+    func fetchPerson(entityName: String) -> [ViewModel] {
         var viewModels = [ViewModel]()
         if let personManagedObjects = CoreDataService.shared.fetchObjects(entityName: entityName) {
             viewModels = personManagedObjects.map {
@@ -57,8 +66,20 @@ extension ViewModel {
         return viewModels
     }
     
-    static func deletePerson(identifier: String, completion: (() -> ())) {
+    func deletePerson(identifier: String, completion: (() -> ())) {
         CoreDataService.shared.deleteObject(entityName: "PersonManagedObject", identifier: identifier)
+        completion()
+    }
+    
+    func updatePerson(viewModel: ViewModel, firstName: String, lastName: String, completion: (() -> ())) {
+        viewModel.person = Person(identifier: viewModel.personIdentifier, firstName: firstName, lastName: lastName)
+        
+        let valuesForUpdate = [
+            "firstName": firstName,
+            "lastName": lastName
+        ]
+        CoreDataService.shared.updateObject(entityName: "PersonManagedObject", identifier: viewModel.personIdentifier, valuesForUpdate: valuesForUpdate)
+        
         completion()
     }
     
