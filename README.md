@@ -36,3 +36,6 @@ https://www.raywenderlich.com/159481/uiscrollview-tutorial-getting-started
 
 ## Day 11: URLSession Tutorial: Getting Started
 https://www.raywenderlich.com/158106/urlsession-tutorial-getting-started
+
+## Day 12: Grand Central Dispatch Tutorial for Swift 3: Part 1/2
+https://www.raywenderlich.com/148513/grand-central-dispatch-tutorial-swift-3-part-1
