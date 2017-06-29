@@ -42,3 +42,6 @@ https://www.raywenderlich.com/148513/grand-central-dispatch-tutorial-swift-3-par
 
 ## Day 13: Grand Central Dispatch Tutorial for Swift 3: Part 2/2
 https://www.raywenderlich.com/148515/grand-central-dispatch-tutorial-swift-3-part-2
+
+## Day 14: Easier Auto Layout: Coding Constraints in iOS 9
+https://www.raywenderlich.com/125718/coding-auto-layout
