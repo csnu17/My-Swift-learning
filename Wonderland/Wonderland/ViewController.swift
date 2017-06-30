@@ -59,15 +59,6 @@ class ViewController: UIViewController {
     avatarView.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor).isActive = true
 //    avatarView.heightAnchor.constraint(equalToConstant: 200).isActive = true
     avatarView.bottomAnchor.constraint(equalTo: chapterLabel.topAnchor, constant: -10).isActive = true
-    
-    /*
-    avatarView.setContentHuggingPriority(
-      UILayoutPriority.required,
-      for: .vertical)
-    avatarView.setContentCompressionResistancePriority(
-      UILayoutPriority.required,
-      for: .vertical)
-     */
  
     chapterLabel.translatesAutoresizingMaskIntoConstraints = false
     chapterLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true

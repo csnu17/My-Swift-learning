@@ -45,3 +45,6 @@ https://www.raywenderlich.com/148515/grand-central-dispatch-tutorial-swift-3-par
 
 ## Day 14: Easier Auto Layout: Coding Constraints in iOS 9
 https://www.raywenderlich.com/125718/coding-auto-layout
+
+## Day 15: An Introduction to Functional Programming in Swift
+https://www.raywenderlich.com/157123/introduction-functional-programming-swift-2
