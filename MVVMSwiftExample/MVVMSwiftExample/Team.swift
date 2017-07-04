@@ -8,8 +8,7 @@
 
 import Foundation
 
-class Team: NSObject {
-  
+class Team {
   let identifier: String
   var name: String
   var players: [Player]
@@ -17,11 +16,11 @@ class Team: NSObject {
   init(name: String, identifier: String) {
     self.name = name
     self.identifier = identifier
-    self.players = []
+    players = []
   }
   
   func addPlayer(_ player: Player) {
-    self.players.append(player)
+    players.append(player)
   }
   
   func containsPlayer(_ player: Player) -> Bool {
@@ -35,5 +34,4 @@ class Team: NSObject {
     
     return contains
   }
-  
 }

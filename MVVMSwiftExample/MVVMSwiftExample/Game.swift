@@ -20,8 +20,7 @@ enum GameNotifications {
   static let GameScoreDidChangeNotification = "GameScoreDidChangeNotification"
 }
 
-class Game: NSObject {
-  
+class Game {
   let matchWinningScore: UInt = 15
   
   var identifier: String
@@ -33,15 +32,13 @@ class Game: NSObject {
   var time: TimeInterval = 0.0
   var isFinished: Bool = false
   
-  fileprivate var moveHistory: [(move: PlayerInGameMove, player: Player)]
+  private var moveHistory: [(move: PlayerInGameMove, player: Player)]
   
   init(homeTeam: Team, awayTeam: Team, identifier: String) {
     self.identifier = identifier
-    
     self.homeTeam = homeTeam
     self.awayTeam = awayTeam
-    
-    self.moveHistory = []
+    moveHistory = []
   }
   
   func addPlayerMove(_ move: PlayerInGameMove, for player: Player) {
@@ -53,8 +50,10 @@ class Game: NSObject {
     updateMoveHistory(with: move, player: player)
     
     switch move {
-    case .onePoint: updateScore(1, withScoringPlayer: player)
-    case .twoPoints: updateScore(2, withScoringPlayer: player)
+    case .onePoint:
+      updateScore(1, withScoringPlayer: player)
+    case .twoPoints:
+      updateScore(2, withScoringPlayer: player)
     case .assist: return
     case .rebound: return
     case .foul: return
@@ -68,7 +67,6 @@ class Game: NSObject {
         moveCount += 1
       }
     }
-    
     return moveCount
   }
   
@@ -78,7 +76,7 @@ class Game: NSObject {
   
   // MARK: Private
   
-  fileprivate func containsPlayer(_ player: Player) -> Bool {
+  private func containsPlayer(_ player: Player) -> Bool {
     var contains = false
     
     contains = homeTeam.containsPlayer(player)
@@ -89,11 +87,11 @@ class Game: NSObject {
     return contains
   }
   
-  fileprivate func updateMoveHistory(with move: PlayerInGameMove, player: Player) {
+  private func updateMoveHistory(with move: PlayerInGameMove, player: Player) {
     moveHistory.append((move: move, player: player))
   }
   
-  fileprivate func updateScore(_ score: UInt, withScoringPlayer player: Player) {
+  private func updateScore(_ score: UInt, withScoringPlayer player: Player) {
     if isFinished || score == 0 {
       return
     }
@@ -112,7 +110,7 @@ class Game: NSObject {
     NotificationCenter.default.post(name: Notification.Name(rawValue: GameNotifications.GameScoreDidChangeNotification), object: self)
   }
   
-  fileprivate func checkIfFinished() -> Bool {
+  private func checkIfFinished() -> Bool {
     var isFinished = false
     
     let winningScoreReached = homeTeamScore >= matchWinningScore ||
@@ -124,5 +122,4 @@ class Game: NSObject {
     
     return isFinished
   }
-  
 }

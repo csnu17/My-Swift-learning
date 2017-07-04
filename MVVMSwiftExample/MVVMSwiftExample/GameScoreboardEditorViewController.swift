@@ -9,7 +9,6 @@
 import UIKit
 
 class GameScoreboardEditorViewController: UIViewController {
-  
   @IBOutlet weak var homePlayer1View: PlayerScoreboardMoveEditorView!
   @IBOutlet weak var homePlayer2View: PlayerScoreboardMoveEditorView!
   @IBOutlet weak var homePlayer3View: PlayerScoreboardMoveEditorView!
@@ -28,7 +27,6 @@ class GameScoreboardEditorViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
     styleUI()
     fillUI()
   }
@@ -41,16 +39,15 @@ class GameScoreboardEditorViewController: UIViewController {
   
   // MARK: Private
   
-  fileprivate func styleUI() {
-    self.view.backgroundColor = UIColor.backgroundColor
-    self.scoreLabel.textColor = UIColor.scoreColor
-    self.homeTeamNameLabel.textColor = UIColor.textColor
-    self.awayTeamNameLabel.textColor = UIColor.textColor
-    self.timeLabel.textColor = UIColor.textColor
+  private func styleUI() {
+    view.backgroundColor = UIColor.backgroundColor
+    scoreLabel.textColor = UIColor.scoreColor
+    homeTeamNameLabel.textColor = UIColor.textColor
+    awayTeamNameLabel.textColor = UIColor.textColor
+    timeLabel.textColor = UIColor.textColor
   }
   
-  fileprivate func fillUI() {
+  private func fillUI() {
     
   }
-  
 }

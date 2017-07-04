@@ -9,7 +9,6 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-  
   var gameLibrary: GameLibrary? {
     didSet {
       showGameScoreboardEditorViewController()
@@ -18,14 +17,13 @@ class HomeViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
     showGameScoreboardEditorViewController()
   }
   
   // MARK: Private
   
-  fileprivate func showGameScoreboardEditorViewController() {
-    if !self.isViewLoaded {
+  private func showGameScoreboardEditorViewController() {
+    if !isViewLoaded {
       return
     }
     
@@ -34,14 +32,13 @@ class HomeViewController: UIViewController {
     }
     
     if let game = gameLibrary.allGames().first {
-      
       let controller = UIStoryboard.loadGameScoreboardEditorViewController()
       
       // uncomment this when view model is implemented
       //            let viewModel = GameScoreboardEditorViewModelFromGame(withGame: game)
       //            controller.viewModel = viewModel
       
-      self.insertChildController(controller, intoParentView: self.view)
+      insertChildController(controller, intoParentView: view)
     }
   }
 }

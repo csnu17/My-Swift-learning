@@ -8,8 +8,7 @@
 
 import Foundation
 
-class Player: NSObject {
-  
+class Player {
   let identifier: String
   var name: String
   

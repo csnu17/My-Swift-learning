@@ -9,16 +9,14 @@
 import UIKit
 
 extension UIViewController {
-  
   func insertChildController(_ childController: UIViewController, intoParentView parentView: UIView) {
     childController.willMove(toParentViewController: self)
     
-    self.addChildViewController(childController)
+    addChildViewController(childController)
     childController.view.frame = parentView.bounds
     parentView.addSubview(childController.view)
     
     childController.didMove(toParentViewController: self)
   }
-  
 }
 

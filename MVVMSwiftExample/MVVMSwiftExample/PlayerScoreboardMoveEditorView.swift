@@ -9,7 +9,6 @@
 import UIKit
 
 class PlayerScoreboardMoveEditorView: UIView {
-  
   @IBOutlet weak var onePointCountLabel: UILabel!
   @IBOutlet weak var twoPointCountLabel: UILabel!
   @IBOutlet weak var assistCountLabel: UILabel!
@@ -23,21 +22,21 @@ class PlayerScoreboardMoveEditorView: UIView {
   @IBOutlet weak var reboundButton: UIButton!
   @IBOutlet weak var foulButton: UIButton!
   
-  fileprivate weak var playerNibView: UIView!
+  private weak var playerNibView: UIView!
   
   required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
     
     let playerView: UIView = UINib.loadPlayerScoreboardMoveEditorView(self)
-    self.addSubview(playerView)
-    self.playerNibView = playerView
+    addSubview(playerView)
+    playerNibView = playerView
     
     styleUI()
   }
   
   override func layoutSubviews() {
     super.layoutSubviews()
-    playerNibView.frame = self.bounds
+    playerNibView.frame = bounds
   }
   
   // MARK: Button Action
@@ -64,13 +63,13 @@ class PlayerScoreboardMoveEditorView: UIView {
   
   // MARK: Private
   
-  fileprivate func styleUI() {
-    self.layer.cornerRadius = 5.0
-    self.layer.borderWidth = 1.0
-    self.layer.borderColor = UIColor.borderColor.cgColor
-    self.clipsToBounds = true
+  private func styleUI() {
+    layer.cornerRadius = 5.0
+    layer.borderWidth = 1.0
+    layer.borderColor = UIColor.borderColor.cgColor
+    clipsToBounds = true
     
-    self.backgroundColor = UIColor.playerBackgroundColor
+    backgroundColor = UIColor.playerBackgroundColor
     
     styleActionButton(onePointButton)
     styleActionButton(twoPointsButton)
@@ -79,7 +78,7 @@ class PlayerScoreboardMoveEditorView: UIView {
     styleActionButton(foulButton)
   }
   
-  fileprivate func styleActionButton(_ button: UIButton) {
+  private func styleActionButton(_ button: UIButton) {
     button.setTitleColor(UIColor.scoreColor, for: UIControlState())
     button.layer.cornerRadius = button.bounds.size.width / 2.0
     button.layer.borderWidth = 1.0
@@ -87,8 +86,7 @@ class PlayerScoreboardMoveEditorView: UIView {
     button.backgroundColor = UIColor.brightPlayerBackgroundColor
   }
   
-  fileprivate func fillUI() {
+  private func fillUI() {
     
   }
-  
 }

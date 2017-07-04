@@ -9,15 +9,14 @@
 import UIKit
 
 extension UIColor {
-  
   // MARK: Private
   
   // MARK: Private
-  fileprivate static func rgba(_ r: CGFloat, _ g: CGFloat, _ b: CGFloat, _ a: CGFloat) -> UIColor {
+  private static func rgba(_ r: CGFloat, _ g: CGFloat, _ b: CGFloat, _ a: CGFloat) -> UIColor {
     return UIColor(red: r/255, green: g/255, blue: b/255, alpha: a)
   }
   
-  fileprivate static func rgb(_ r: CGFloat, _ g: CGFloat, _ b: CGFloat) -> UIColor {
+  private static func rgb(_ r: CGFloat, _ g: CGFloat, _ b: CGFloat) -> UIColor {
     return rgba(r, g, b, 1.0)
   }
   

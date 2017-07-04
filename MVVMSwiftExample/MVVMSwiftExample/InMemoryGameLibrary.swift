@@ -8,13 +8,10 @@
 
 import Foundation
 
-class InMemoryGameLibrary: NSObject, GameLibrary {
+class InMemoryGameLibrary: GameLibrary {
+  private var games: [Game] = []
   
-  fileprivate var games: [Game] = []
-  
-  override init() {
-    super.init()
-    
+  init() {
     // add some teams
     addDummyGame()
     addDummyGame()
@@ -34,7 +31,7 @@ class InMemoryGameLibrary: NSObject, GameLibrary {
     addDummyGame()
   }
   
-  fileprivate func addDummyGame() {
+  private func addDummyGame() {
     let homeTeam: Team = Team(name: "Ballerz", identifier: UUID().uuidString)
     homeTeam.addPlayer(Player(name: "Shaq", identifier: UUID().uuidString))
     homeTeam.addPlayer(Player(name: "A.I.", identifier: UUID().uuidString))
@@ -46,7 +43,7 @@ class InMemoryGameLibrary: NSObject, GameLibrary {
     awayTeam.addPlayer(Player(name: "Kobe", identifier: UUID().uuidString))
     
     let game: Game = Game(homeTeam: homeTeam, awayTeam: awayTeam, identifier: UUID().uuidString)
-    self.games.append(game)
+    games.append(game)
   }
   
   // MARK: GameLibrary Protocol
@@ -103,10 +100,8 @@ class InMemoryGameLibrary: NSObject, GameLibrary {
   
   // MARK: Private
   
-  fileprivate func notification(_ name: String, game: Game) -> Notification {
+  private func notification(_ name: String, game: Game) -> Notification {
     let notification: Notification = Notification(name: Notification.Name(rawValue: name), object: self, userInfo: ["game" : game])
-    
     return notification
   }
-  
 }

@@ -9,9 +9,9 @@
 import Foundation
 
 enum GameLibraryNotifications {
-  static let GameLibraryGameAdded    = "GameLibraryGameAdded"
-  static let GameLibraryGameRemoved  = "GameLibraryGameRemoved"
-  static let GameLibraryGameUpdated  = "GameLibraryGameUpdated"
+  static let GameLibraryGameAdded = "GameLibraryGameAdded"
+  static let GameLibraryGameRemoved = "GameLibraryGameRemoved"
+  static let GameLibraryGameUpdated = "GameLibraryGameUpdated"
 }
 
 protocol GameLibrary {
