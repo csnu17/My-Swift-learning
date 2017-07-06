@@ -21,16 +21,16 @@ enum GameNotifications {
 }
 
 class Game {
-  let matchWinningScore: UInt = 15
+  let matchWinningScore = 15
   
   var identifier: String
   var homeTeam: Team
   var awayTeam: Team
-  var homeTeamScore: UInt = 0
-  var awayTeamScore: UInt = 0
+  var homeTeamScore = 0
+  var awayTeamScore = 0
   
   var time: TimeInterval = 0.0
-  var isFinished: Bool = false
+  var isFinished = false
   
   private var moveHistory: [(move: PlayerInGameMove, player: Player)]
   
@@ -60,8 +60,8 @@ class Game {
     }
   }
   
-  func playerMoveCount(for player: Player, move: PlayerInGameMove) -> UInt {
-    var moveCount: UInt = 0
+  func playerMoveCount(for player: Player, move: PlayerInGameMove) -> Int {
+    var moveCount = 0
     for currentMove in moveHistory {
       if currentMove.move == move && currentMove.player.identifier == player.identifier {
         moveCount += 1
@@ -91,7 +91,7 @@ class Game {
     moveHistory.append((move: move, player: player))
   }
   
-  private func updateScore(_ score: UInt, withScoringPlayer player: Player) {
+  private func updateScore(_ score: Int, withScoringPlayer player: Player) {
     if isFinished || score == 0 {
       return
     }

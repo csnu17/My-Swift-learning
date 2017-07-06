@@ -32,17 +32,17 @@ class InMemoryGameLibrary: GameLibrary {
   }
   
   private func addDummyGame() {
-    let homeTeam: Team = Team(name: "Ballerz", identifier: UUID().uuidString)
+    let homeTeam = Team(name: "Ballerz", identifier: UUID().uuidString)
     homeTeam.addPlayer(Player(name: "Shaq", identifier: UUID().uuidString))
     homeTeam.addPlayer(Player(name: "A.I.", identifier: UUID().uuidString))
     homeTeam.addPlayer(Player(name: "T-Mac", identifier: UUID().uuidString))
     
-    let awayTeam: Team = Team(name: "Ringerz", identifier: UUID().uuidString)
+    let awayTeam = Team(name: "Ringerz", identifier: UUID().uuidString)
     awayTeam.addPlayer(Player(name: "Hakeem", identifier: UUID().uuidString))
     awayTeam.addPlayer(Player(name: "Air Carter", identifier: UUID().uuidString))
     awayTeam.addPlayer(Player(name: "Kobe", identifier: UUID().uuidString))
     
-    let game: Game = Game(homeTeam: homeTeam, awayTeam: awayTeam, identifier: UUID().uuidString)
+    let game = Game(homeTeam: homeTeam, awayTeam: awayTeam, identifier: UUID().uuidString)
     games.append(game)
   }
   
@@ -65,7 +65,7 @@ class InMemoryGameLibrary: GameLibrary {
   
   func removeGame(_ game: Game) {
     var indexToRemove: Int?
-    for index in 0...games.count-1 {
+    for index in 0 ..< games.count {
       let currentGame = games[index]
       if currentGame.identifier == game.identifier {
         indexToRemove = index
@@ -101,7 +101,7 @@ class InMemoryGameLibrary: GameLibrary {
   // MARK: Private
   
   private func notification(_ name: String, game: Game) -> Notification {
-    let notification: Notification = Notification(name: Notification.Name(rawValue: name), object: self, userInfo: ["game" : game])
+    let notification = Notification(name: Notification.Name(rawValue: name), object: self, userInfo: ["game" : game])
     return notification
   }
 }
