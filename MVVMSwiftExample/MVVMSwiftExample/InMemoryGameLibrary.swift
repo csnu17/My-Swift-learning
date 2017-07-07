@@ -32,12 +32,12 @@ class InMemoryGameLibrary: GameLibrary {
   }
   
   private func addDummyGame() {
-    let homeTeam = Team(name: "Ballerz", identifier: UUID().uuidString)
+    var homeTeam = Team(name: "Ballerz", identifier: UUID().uuidString, players: [])
     homeTeam.addPlayer(Player(name: "Shaq", identifier: UUID().uuidString))
     homeTeam.addPlayer(Player(name: "A.I.", identifier: UUID().uuidString))
     homeTeam.addPlayer(Player(name: "T-Mac", identifier: UUID().uuidString))
     
-    let awayTeam = Team(name: "Ringerz", identifier: UUID().uuidString)
+    var awayTeam = Team(name: "Ringerz", identifier: UUID().uuidString, players: [])
     awayTeam.addPlayer(Player(name: "Hakeem", identifier: UUID().uuidString))
     awayTeam.addPlayer(Player(name: "Air Carter", identifier: UUID().uuidString))
     awayTeam.addPlayer(Player(name: "Kobe", identifier: UUID().uuidString))

@@ -11,7 +11,7 @@ import Foundation
 class PlayerScoreboardMoveEditorViewModelFromPlayer: PlayerScoreboardMoveEditorViewModel {
   
   private let player: Player
-  private let game: Game
+  private var game: Game
   
   // MARK: PlayerScoreboardMoveEditorViewModel protocol
   

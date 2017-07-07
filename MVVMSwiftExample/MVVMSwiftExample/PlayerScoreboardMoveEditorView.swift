@@ -98,6 +98,8 @@ class PlayerScoreboardMoveEditorView: UIView {
       return
     }
     
+    name.text = viewModel.playerName
+    
     viewModel.onePointMoveCount.bindAndFire { [unowned self] in self.onePointCountLabel.text = $0 }
     viewModel.twoPointMoveCount.bindAndFire { [unowned self] in self.twoPointCountLabel.text = $0 }
     viewModel.assistMoveCount.bindAndFire { [unowned self] in self.assistCountLabel.text = $0 }

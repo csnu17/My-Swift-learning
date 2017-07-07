@@ -23,7 +23,7 @@ enum GameNotifications {
 class Game {
   let matchWinningScore = 15
   
-  var identifier: String
+  let identifier: String
   var homeTeam: Team
   var awayTeam: Team
   var homeTeamScore = 0

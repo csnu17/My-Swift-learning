@@ -8,18 +8,12 @@
 
 import Foundation
 
-class Team {
+struct Team {
+  let name: String
   let identifier: String
-  var name: String
   var players: [Player]
   
-  init(name: String, identifier: String) {
-    self.name = name
-    self.identifier = identifier
-    players = []
-  }
-  
-  func addPlayer(_ player: Player) {
+  mutating func addPlayer(_ player: Player) {
     players.append(player)
   }
   

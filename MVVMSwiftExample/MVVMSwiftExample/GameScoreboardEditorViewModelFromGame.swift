@@ -24,8 +24,8 @@ class GameScoreboardEditorViewModelFromGame: GameScoreboardEditorViewModel {
   let homePlayers: [PlayerScoreboardMoveEditorViewModel]
   let awayPlayers: [PlayerScoreboardMoveEditorViewModel]
   
-  var homeTeam: String
-  var awayTeme: String
+  let homeTeam: String
+  let awayTeme: String
   let time: Dynamic<String>
   let score: Dynamic<String>
   let isFinished: Dynamic<Bool>

@@ -8,12 +8,7 @@
 
 import Foundation
 
-class Player {
+struct Player {
+  let name: String
   let identifier: String
-  var name: String
-  
-  init(name: String, identifier: String) {
-    self.name = name
-    self.identifier = identifier
-  }
 }

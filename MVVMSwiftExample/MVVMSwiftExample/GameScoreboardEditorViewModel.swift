@@ -18,7 +18,7 @@ protocol GameScoreboardEditorViewModel {
   var time: Dynamic<String> { get }
   var score: Dynamic<String> { get }
   var isFinished: Dynamic<Bool> { get }
-  var isPaused: Dynamic<Bool> { get}
+  var isPaused: Dynamic<Bool> { get }
   
   func togglePause()
 }
