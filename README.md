@@ -48,3 +48,6 @@ https://www.raywenderlich.com/125718/coding-auto-layout
 
 ## Day 15: An Introduction to Functional Programming in Swift
 https://www.raywenderlich.com/157123/introduction-functional-programming-swift-2
+
+## Day 16: An Introduction to the MVVM Design Pattern
+https://www.toptal.com/ios/swift-tutorial-introduction-to-mvvm

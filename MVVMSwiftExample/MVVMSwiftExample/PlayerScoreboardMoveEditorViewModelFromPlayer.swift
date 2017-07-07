@@ -9,9 +9,8 @@
 import Foundation
 
 class PlayerScoreboardMoveEditorViewModelFromPlayer: PlayerScoreboardMoveEditorViewModel {
-  
   private let player: Player
-  private var game: Game
+  private let game: Game
   
   // MARK: PlayerScoreboardMoveEditorViewModel protocol
   
