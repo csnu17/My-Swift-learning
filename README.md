@@ -51,3 +51,6 @@ https://www.raywenderlich.com/157123/introduction-functional-programming-swift-2
 
 ## Day 16: An Introduction to the MVVM Design Pattern
 https://www.toptal.com/ios/swift-tutorial-introduction-to-mvvm
+
+## Day 17: UIStackView Tutorial: Introducing Stack Views
+https://www.raywenderlich.com/114552/uistackview-tutorial-introducing-stack-views
