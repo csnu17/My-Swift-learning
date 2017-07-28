@@ -56,5 +56,5 @@ https://www.toptal.com/ios/swift-tutorial-introduction-to-mvvm
 https://www.raywenderlich.com/114552/uistackview-tutorial-introducing-stack-views
 
 ## Day 18: UICollectionView Tutorial: Getting Started
-https://www.raywenderlich.com/136159/uicollectionview-tutorial-getting-started
+https://www.raywenderlich.com/136159/uicollectionview-tutorial-getting-started__
 https://github.com/csnu17/FlickrSearch
