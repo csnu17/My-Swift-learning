@@ -54,3 +54,7 @@ https://www.toptal.com/ios/swift-tutorial-introduction-to-mvvm
 
 ## Day 17: UIStackView Tutorial: Introducing Stack Views
 https://www.raywenderlich.com/114552/uistackview-tutorial-introducing-stack-views
+
+## Day 18: UICollectionView Tutorial: Getting Started
+https://www.raywenderlich.com/136159/uicollectionview-tutorial-getting-started
+https://github.com/csnu17/FlickrSearch
