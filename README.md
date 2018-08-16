@@ -61,3 +61,6 @@ https://github.com/csnu17/FlickrSearch
 
 ## Day 19: Coordinator Tutorial for iOS: Getting Started
 https://www.raywenderlich.com/177538/coordinator-tutorial-ios-getting-started
+
+## Day 20: How to Play, Record, and Merge Videos in iOS and Swift
+https://www.raywenderlich.com/5135-how-to-play-record-and-merge-videos-in-ios-and-swift
