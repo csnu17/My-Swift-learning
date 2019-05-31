@@ -67,3 +67,6 @@ https://www.raywenderlich.com/5135-how-to-play-record-and-merge-videos-in-ios-an
 
 ## Day 21: Getting Started With PromiseKit
 https://www.raywenderlich.com/9208-getting-started-with-promisekit
+
+## Day 22: Tesseract OCR Tutorial for iOS
+https://www.raywenderlich.com/2010498-tesseract-ocr-tutorial-for-ios
