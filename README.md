@@ -73,3 +73,5 @@ https://www.raywenderlich.com/2010498-tesseract-ocr-tutorial-for-ios
 
 ## Day 23: SwiftUI Essentials - Creating and Combining Views
 https://developer.apple.com/tutorials/swiftui/creating-and-combining-views
+
+## Day 24: SwiftUI Essentials - Building Lists and Navigation
