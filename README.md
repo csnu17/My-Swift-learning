@@ -70,3 +70,6 @@ https://www.raywenderlich.com/9208-getting-started-with-promisekit
 
 ## Day 22: Tesseract OCR Tutorial for iOS
 https://www.raywenderlich.com/2010498-tesseract-ocr-tutorial-for-ios
+
+## Day 23: SwiftUI Essentials - Creating and Combining Views
+https://developer.apple.com/tutorials/swiftui/creating-and-combining-views
