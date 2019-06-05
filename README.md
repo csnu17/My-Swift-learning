@@ -76,3 +76,6 @@ https://developer.apple.com/tutorials/swiftui/creating-and-combining-views
 
 ## Day 24: SwiftUI Essentials - Building Lists and Navigation
 https://developer.apple.com/tutorials/swiftui/building-lists-and-navigation
+
+## Day 25: SwiftUI Essentials - Handling User Input
+https://developer.apple.com/tutorials/swiftui/handling-user-input
