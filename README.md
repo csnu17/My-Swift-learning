@@ -79,3 +79,6 @@ https://developer.apple.com/tutorials/swiftui/building-lists-and-navigation
 
 ## Day 25: SwiftUI Essentials - Handling User Input
 https://developer.apple.com/tutorials/swiftui/handling-user-input
+
+## Day 26: Drawing and Animation - Drawing Paths and Shapes
+https://developer.apple.com/tutorials/swiftui/drawing-paths-and-shapes
