@@ -82,3 +82,6 @@ https://developer.apple.com/tutorials/swiftui/handling-user-input
 
 ## Day 26: Drawing and Animation - Drawing Paths and Shapes
 https://developer.apple.com/tutorials/swiftui/drawing-paths-and-shapes
+
+## Day 27: App Design and Layout - Composing Complex Interfaces
+https://developer.apple.com/tutorials/swiftui/composing-complex-interfaces
